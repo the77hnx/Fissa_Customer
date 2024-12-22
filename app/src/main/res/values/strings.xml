@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fissa</string>
+    <string name="basket">Basket</string>
+    <string name="home">Home</string>
+    <string name="following">Following</string>
+    <string name="profile">Profile</string>
+</resources>

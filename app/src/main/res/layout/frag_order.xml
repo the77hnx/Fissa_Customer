@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="15dp"
+android:layout_margin="10dp"    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Restaurant Name -->
+        <TextView
+            android:id="@+id/textViewRestaurantName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="المطعم : ملك البروتين"
+            android:textColor="@color/pink"
+            android:fontFamily="@font/hacen_beirut_bight"
+            android:textSize="25sp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewOrderPrice"
+            android:paddingBottom="8dp"/>
+
+        <!-- Order Price -->
+        <TextView
+            android:id="@+id/textViewOrderPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="سعر الطلب : 250 دج"
+            android:fontFamily="@font/hacen_beirut_bight"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantName"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDeliveryPrice"
+            android:paddingBottom="8dp"/>
+
+        <!-- Delivery Price -->
+        <TextView
+            android:id="@+id/textViewDeliveryPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="سعر التوصيل : 50 دج"
+            android:fontFamily="@font/hacen_beirut_bight"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOrderPrice"
+            app:layout_constraintBottom_toTopOf="@+id/textViewNumberOfDelivery"
+            android:paddingBottom="8dp"/>
+
+        <!-- Delivery Status -->
+        <TextView
+            android:id="@+id/textViewDeliveryStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="حالة الطلب : تم التوصيل"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/hacen_beirut_bight"
+            android:textSize="25sp"
+            android:textColor="@color/green"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTimeOfDelivery"
+            app:layout_constraintBottom_toTopOf="@+id/buttonMoreInfo"
+            android:paddingBottom="8dp"/>
+
+        <!-- Number of Delivery -->
+        <TextView
+            android:id="@+id/textViewNumberOfDelivery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="رقم الطلب : XXXX"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/hacen_beirut_bight"
+            android:textSize="25sp"
+
+
+            app:layout_constraintTop_toBottomOf="@+id/textViewDeliveryPrice"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDateOfDelivery"
+            android:paddingBottom="8dp"/>
+
+        <!-- Date of Delivery -->
+        <TextView
+            android:id="@+id/textViewDateOfDelivery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="تاريخ الطلب : 02/07/2024"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/hacen_beirut_bight"
+            android:textSize="25sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNumberOfDelivery"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTimeOfDelivery"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/textViewTimeOfDelivery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="وقت الطلب : 21:00"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/hacen_beirut_bight"
+            android:textSize="25sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNumberOfDelivery"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDeliveryStatus"
+            android:paddingBottom="8dp"/>
+
+        <!-- Button for More Info -->
+        <Button
+            android:id="@+id/buttonMoreInfo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/tomato_button"
+            android:fontFamily="@font/hacen_beirut_bight"
+            android:text="عرض"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDeliveryStatus" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
